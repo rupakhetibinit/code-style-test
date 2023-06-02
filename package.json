@@ -1,0 +1,27 @@
+{
+	"name": "code-style-test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "ts-node-dev index.ts --respawn --transpile-only",
+		"test": "jest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/jest": "^29.5.2",
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"jest": "^29.5.0",
+		"ts-jest": "^29.1.0",
+		"ts-node-dev": "^2.0.0",
+		"uuid": "^9.0.0",
+		"vitest": "^0.31.4"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.17",
+		"@types/uuid": "^9.0.1"
+	}
+}
