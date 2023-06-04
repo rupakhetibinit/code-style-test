@@ -14,15 +14,10 @@ app.use(express.json());
 
 app.post('/execute', async (req, res) => {
 	const { code, testcode } = req.body as { code: string; testcode: string };
-
-	// console.log(code);
-
 	const tempFile = `${uuid()}.test.js`;
 	await fs.writeFile(tempFile, code + '\n\n' + testcode);
-
 	let output = '';
 	const child = exec(`npx jest ${tempFile} - --json --no-cache`);
-
 	if (!child.stdout) {
 		return res.json({ error: 'Something went wrong' });
 	}
